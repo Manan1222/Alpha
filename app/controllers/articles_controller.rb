@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
   
+  def index
+    # @articles can be any name I just assigned it to understand that here I am listing all the articles
+    @articles = Article.all
+  end
+  
   def new
     @article = Article.new #created new instance of article
   end
