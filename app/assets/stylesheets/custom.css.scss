@@ -1,2 +1,21 @@
+body { padding-top: 70px; }
+
+$btn-primary-bg : #343a40;
+
+.jumbotron {
+   background-image: url("http://viralnovelty.net/wp-content/uploads/2015/02/116.jpg");
+   background-size: cover;
+   height: 550px;
+}
+
+.title {
+  color: #fff;
+}
+
+.tag-line {
+  color: #fff;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
