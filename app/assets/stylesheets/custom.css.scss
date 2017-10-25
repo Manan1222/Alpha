@@ -25,6 +25,17 @@ $btn-primary-bg : #343a40;
   margin-top: 0;
 }
 
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
