@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   resources :articles
+  
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new] #except new because we already defined path NEW just above that
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
