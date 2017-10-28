@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect #if we want to show that what values that we passed through the form
     @article = Article.new(article_params) #we need to pass a method so that we can know which article to be created
-    @article.user = User.first #just for demo purpose
+    @article.user = current_user 
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
