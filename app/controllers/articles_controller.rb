@@ -62,7 +62,7 @@ class ArticlesController < ApplicationController
     end
     
     def article_params
-      params.require(:article).permit(:title, :description) #it requires an article key and a permit to save title and description
+      params.require(:article).permit(:title, :description, images_files: []) #it requires an article key and a permit to save title and description
     end
   
   def require_same_user

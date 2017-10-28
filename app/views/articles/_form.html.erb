@@ -23,6 +23,16 @@
          <%= f.text_area :description, rows:5, class: "form-control", placeholder: "Description of Article", autofocus: true %>
       </div>
     </div>
+    
+     <div class="form-group">
+      <div class="control-label col-sm-2">
+        <%= f.label :images_files %><br>
+      </div>
+      <div class="col-sm-8">
+        <%= f.attachment_field :images_files, multiple: true, presigned: true, direct: true %>
+      </div>
+    </div>
+    
   
     <div class="form-group">
       <div class=" col-sm-offset-2 col-sm-10">
@@ -34,7 +44,7 @@
   
   
   <div class="col-xs-4 col-xs-offset-5">
-   [ <%= link_to "Return to Articles Listing", articles_path %> ]
+   [ <%= link_to "Return to Albums", articles_path %> ]
   </div>
   
   </div>
