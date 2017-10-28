@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   
   def index
     # @articles can be any name I just assigned it to understand that here I am listing all the articles
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 1)
   end
   
   def new
