@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
   
   #before action calls the "set_article"  method before this specified action
   before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
   
   def index
     # @articles can be any name I just assigned it to understand that here I am listing all the articles
@@ -62,4 +64,11 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :description) #it requires an article key and a permit to save title and description
     end
+  
+  def require_same_user
+    if current_user != @article.user
+      flash[:danger] = "You can only delete your Album or Photos"
+      redirect_to root_path
+    end
+  end
 end
