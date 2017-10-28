@@ -22,10 +22,10 @@
       <%= simple_format(@article.description) %>
       <div class="article-action">
       <% if logged_in? && current_user == @article.user %>
-         <%= link_to "Edit Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
-         <%= link_to "Delete this Article", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete the article?"}, class: "btn btn-xs btn-danger" %>
+         <%= link_to "Edit Album", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+         <%= link_to "Delete this Album", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this Album?"}, class: "btn btn-xs btn-danger" %>
        <% end %>
-       <%= link_to "View Articles", articles_path,  class: "btn btn-xs btn-success" %>
+       <%= link_to "View Albums", articles_path,  class: "btn btn-xs btn-success" %>
       </div>
   
 </div>
