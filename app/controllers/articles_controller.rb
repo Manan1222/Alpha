@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
     
      @article.destroy
       flash[:danger] = "Album was successfully Deleted"
-     redirect_to articles_path
+     redirect_to root_path
      
   end
   
